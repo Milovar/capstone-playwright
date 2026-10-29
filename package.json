@@ -1,0 +1,25 @@
+{
+  "name": "capstone-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:list": "playwright test --list",
+    "test:smoke": "playwright test tests/03-search.spec.ts --project=chromium",
+    "test:ci": "playwright test --grep-invert @visual",
+    "test:visual:update": "playwright test tests/08-visual.spec.ts --project=chromium --update-snapshots",
+    "test:visual": "playwright test tests/08-visual.spec.ts --project=chromium",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
